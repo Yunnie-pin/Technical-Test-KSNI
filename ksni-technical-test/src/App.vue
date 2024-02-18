@@ -32,7 +32,7 @@ export default {
           id: 4,
           datasource: "text",
           datatype: "number",
-          value: "100",
+          value: 100,
           sorting: 4
         },
       ]
@@ -60,26 +60,17 @@ export default {
                 </p>
               </div>
             </div>
-
           </div>
           <div class="col">
             <div>
               <form>
-                <DateField formValue="2021-02-01" />
+                <!-- <DateField formValue="2021-02-01" />
                 <TextField formValue="sdasdsa" />
-                <TextAreaField formValue="Hello" />
-                <!-- <div v-for="item in formData" :key="item.id">
-                  <div v-if="item.datasource === 'text'">
-                    <div class="pb-2">
-                      <label for="text-label" class="form-label">Text</label>
-                      <input type="text" :value="item.value" class="form-control" />
-                    </div>
-                    <div class="pb-2">
-                      <label for="text-label" class="form-label">Number</label>
-                      <input type="number" :value="item.value" class="form-control" />
-                    </div>
-                  </div>
-                </div> -->
+                <TextAreaField formValue="Hello" /> -->
+                <div v-for="item in formData" :key="item.source">
+                  <!-- {{ item.datasource }} -->
+                  <FormItemField :dataSource="item.datasource" :dataType="item.datatype" :formValue="item.value"/>
+                </div>
               </form>
             </div>
           </div>
