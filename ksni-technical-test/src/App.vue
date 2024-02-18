@@ -1,47 +1,92 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+<script>
+
+import { ref } from 'vue'
+
+export default {
+  setup() {
+    const formData = ref(
+      [
+        {
+          id: 1,
+          datasource: "text",
+          datatype: "string",
+          value: "ini adalah global component dari text field",
+          sorting: 1
+        },
+        {
+          id: 2,
+          datasource: "date",
+          datatype: "date",
+          value: "2024-02-16",
+          sorting: 2
+        },
+        {
+          id: 3,
+          datasource: "text-area",
+          datatype: "string",
+          value: "<p>ni adalah global component dari text area</p>",
+          sorting: 3
+        },
+
+        {
+          id: 4,
+          datasource: "text",
+          datatype: "number",
+          value: "100",
+          sorting: 4
+        },
+      ]
+    )
+
+    return {
+      formData,
+    }
+  }
+}
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
+  <section>
+    <div class="container pt-5">
+      <div class="card p-3">
+        <div class="row">
+          <div class="col pb-3">
+            <div class="text-center">
+              <img alt="Vue logo" src="./assets/logo.svg" width="125" height="125" class="px-1" />
+              <div class="pt-3 pr-3">
+                <h3 class="text-2xl font-semibold green ">Technical Test</h3>
+                <p class="text-sm font-bold">
+                  Arifin Yunianta | Fullstack Developer
+                </p>
+              </div>
+            </div>
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+          </div>
+          <div class="col">
+            <div>
+              <form>
+                <DateField formValue="2021-02-01" />
+                <TextField formValue="sdasdsa" />
+                <TextAreaField formValue="Hello" />
+                <!-- <div v-for="item in formData" :key="item.id">
+                  <div v-if="item.datasource === 'text'">
+                    <div class="pb-2">
+                      <label for="text-label" class="form-label">Text</label>
+                      <input type="text" :value="item.value" class="form-control" />
+                    </div>
+                    <div class="pb-2">
+                      <label for="text-label" class="form-label">Number</label>
+                      <input type="number" :value="item.value" class="form-control" />
+                    </div>
+                  </div>
+                </div> -->
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
     </div>
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main>
+  </section>
 </template>
-
-<style scoped>
-header {
-  line-height: 1.5;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-}
-</style>
