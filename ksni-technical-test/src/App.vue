@@ -43,14 +43,17 @@ export default {
     const deleteItem = (item) => {
       formData.value = formData.value.filter((data) => data.id !== item.id)
     }
-    const addColoumn = (item) => {
-      formData.value.push(item)
+
+    const handleSubmit = () => {
+      console.log(formData.value)
+      alert('Hasil formnya adalah : ' + JSON.stringify(formData.value))
     }
 
     return {
       formData,
       deleteItem,
-      showModal
+      showModal,
+      handleSubmit
     }
   }
 }
@@ -90,8 +93,16 @@ export default {
                 <div v-for="item in formData" :key="item.source">
                   <div class="d-flex  align-items-center">
                     <div class="flex-grow-1 ms-3">
-                      <FormItemField :dataSource="item.datasource" :dataType="item.datatype" :formValue="item.value" />
-
+                      <!-- <FormItemField v-model:formValue="item.value" :dataSource="item.datasource"/> -->
+                      <div v-if="item.datasource === 'text'">
+                        <TextField v-model:formValue="item.value" />
+                      </div>
+                      <div v-else-if="item.datasource === 'text-area'">
+                        <TextAreaField v-model:formValue="item.value" />
+                      </div>
+                      <div v-else-if="item.datasource === 'date'">
+                        <DateField v-model:formValue="item.value" />
+                      </div>
                     </div>
                     <div class="flex-shrink-0">
                       <button class="btn btn-danger mx-3" @click.prevent="deleteItem(item)">Hapus</button>
@@ -99,9 +110,9 @@ export default {
                   </div>
                 </div>
 
-                <AddModal :show="showModal" @close="showModal = false" title="Tambah Kolom"/>
+                <AddModal :show="showModal" @close="showModal = false" title="Tambah Kolom" />
 
-                <button class="btn btn-primary mt-3 mx-3">Kirim</button>
+                <button class="btn btn-primary mt-3 mx-3" @click.prevent="handleSubmit">Kirim</button>
               </form>
             </div>
           </div>
