@@ -9,6 +9,7 @@ defineProps({
         type: String || Number || Date,
     }
 })
+
 </script>
 
 <template>

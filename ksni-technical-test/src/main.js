@@ -8,6 +8,7 @@ import TextField from './components/TextField.vue'
 import TextAreaField from './components/TextAreaField.vue'
 import DateField from './components/DateField.vue'
 import FormItemField from './components/FormItemField.vue'
+import AddModal from './components/AddModal.vue'
 
 // bootstrap
 import 'bootstrap/dist/css/bootstrap.css'
@@ -20,4 +21,5 @@ app
   .component('TextAreaField', TextAreaField)
   .component('DateField', DateField)
   .component('FormItemField', FormItemField)
+  .component('AddModal', AddModal)
   .mount('#app')

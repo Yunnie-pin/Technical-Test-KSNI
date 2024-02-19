@@ -1,13 +1,10 @@
 <script setup>
 defineProps({
     formValue: {
-        type: String || Number,
+        type: [String, Number],
         required: true
     },
-    dataType: {
-        type: String,
-        required: true
-    }
+
 })
 </script>
 

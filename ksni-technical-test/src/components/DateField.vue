@@ -4,10 +4,8 @@ defineProps({
     type: String,
     required: true
   },
-  dataType: {
-    type: String,
-    required: true
-  }
+  
+
 })
 
 </script>

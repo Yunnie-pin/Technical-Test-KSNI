@@ -4,6 +4,8 @@ import { ref } from 'vue'
 
 export default {
   setup() {
+    const showModal = ref(false)
+
     const formData = ref(
       [
         {
@@ -41,9 +43,14 @@ export default {
     const deleteItem = (item) => {
       formData.value = formData.value.filter((data) => data.id !== item.id)
     }
+    const addColoumn = (item) => {
+      formData.value.push(item)
+    }
+
     return {
       formData,
-      deleteItem
+      deleteItem,
+      showModal
     }
   }
 }
@@ -70,13 +77,13 @@ export default {
               <!-- tambah form -->
               <div class="d-flex justify-content-between pb-3">
                 <h3 class="text-2xl font-semibold green">Dynamic Form</h3>
-                <button class="btn-sm btn-success py-0">Tambah Kolom</button>
+                <button @click="showModal = true" class="btn btn-success">Tambah Kolom</button>
               </div>
 
               <form class="card p-2">
                 <div v-if="formData.length === 0">
                   <div class="alert alert-danger p-1 text-center" role="alert">
-                    Data tidak ditemukan
+                    Kolom belum ditambahkan
                   </div>
                 </div>
 
@@ -87,14 +94,14 @@ export default {
 
                     </div>
                     <div class="flex-shrink-0">
-                      <button class="btn-sm btn-danger mx-3" @click.prevent="deleteItem(item)">Hapus</button>
+                      <button class="btn btn-danger mx-3" @click.prevent="deleteItem(item)">Hapus</button>
                     </div>
                   </div>
                 </div>
 
+                <AddModal :show="showModal" @close="showModal = false" title="Tambah Kolom"/>
 
-
-                <button class="btn btn-primary mt-3">Kirim</button>
+                <button class="btn btn-primary mt-3 mx-3">Kirim</button>
               </form>
             </div>
           </div>
