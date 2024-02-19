@@ -3,7 +3,6 @@ const formValue = defineModel('formValue', {
   type: Date,
   required: true
 })
-
 </script>
 
 <template>

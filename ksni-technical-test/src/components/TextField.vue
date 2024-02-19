@@ -1,4 +1,11 @@
 <script setup>
+defineProps({
+    dataType: {
+        type: String,
+        required: true
+    }
+})
+
 const formValue = defineModel('formValue', {
     type: [String, Number],
     required: true
@@ -8,6 +15,6 @@ const formValue = defineModel('formValue', {
 <template>
     <div class="pb-2">
         <label for="text-label" class="form-label">Text</label>
-        <input type="text" v-model="formValue" class="form-control" />
+        <input :type="dataType" v-model="formValue" class="form-control" />
     </div>
 </template>

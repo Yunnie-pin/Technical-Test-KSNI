@@ -6,6 +6,13 @@ export default {
   setup() {
     const showModal = ref(false)
 
+    const newColoumn = ref({
+      datasource: '',
+      datatype: '',
+      value: '',
+      sorting: ''
+    })
+
     const formData = ref(
       [
         {
@@ -29,7 +36,6 @@ export default {
           value: "<p>ni adalah global component dari text area</p>",
           sorting: 3
         },
-
         {
           id: 4,
           datasource: "text",
@@ -49,11 +55,24 @@ export default {
       alert('Hasil formnya adalah : ' + JSON.stringify(formData.value))
     }
 
+    const addNewColumn = (data) => {
+      formData.value.push({
+        id: formData.value.length + 1,
+        datasource: data.datasource,
+        datatype: data.datatype,
+        value: '',
+        sorting: formData.value.length + 1
+      })
+    }
+
+
     return {
       formData,
       deleteItem,
       showModal,
-      handleSubmit
+      handleSubmit,
+      newColoumn,
+      addNewColumn
     }
   }
 }
@@ -93,9 +112,8 @@ export default {
                 <div v-for="item in formData" :key="item.source">
                   <div class="d-flex  align-items-center">
                     <div class="flex-grow-1 ms-3">
-                      <!-- <FormItemField v-model:formValue="item.value" :dataSource="item.datasource"/> -->
                       <div v-if="item.datasource === 'text'">
-                        <TextField v-model:formValue="item.value" />
+                        <TextField v-model:formValue="item.value" :dataType="item.datatype" />
                       </div>
                       <div v-else-if="item.datasource === 'text-area'">
                         <TextAreaField v-model:formValue="item.value" />
@@ -109,8 +127,7 @@ export default {
                     </div>
                   </div>
                 </div>
-
-                <AddModal :show="showModal" @close="showModal = false" title="Tambah Kolom" />
+                <AddModal :show="showModal" @close="showModal = false" title="Tambah Kolom" @newColoum="addNewColumn" />
 
                 <button class="btn btn-primary mt-3 mx-3" @click.prevent="handleSubmit">Kirim</button>
               </form>
