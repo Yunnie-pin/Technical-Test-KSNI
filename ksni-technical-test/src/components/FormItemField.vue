@@ -4,13 +4,9 @@ defineProps({
         type: String,
         required: true
     },
-    dataType: {
-        type: String,
-        required: true
-    },
+
     formValue: {
         type: String || Number || Date,
-        required: true
     }
 })
 </script>
