@@ -1,0 +1,22 @@
+{
+  "name": "technical-test-ksni",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yunnie-pin/Technical-Test-KSNI.git"
+  },
+  "keywords": [
+    "vuejs"
+  ],
+  "author": "yunnie-pin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yunnie-pin/Technical-Test-KSNI/issues"
+  },
+  "homepage": "https://github.com/Yunnie-pin/Technical-Test-KSNI#readme"
+}

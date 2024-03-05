@@ -1,7 +1,7 @@
 {
   "name": "ksni-technical-test",
-  "version": "0.0.0",
-  "private": true,
+  "version": "1.1.2",
+  "private": false,
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -10,6 +10,14 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
     "format": "prettier --write src/"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yunnie-pin/Technical-Test-KSNI.git"
+  },
+  "keywords": [
+    "vuejs"
+  ],
+  "author": "yunnie-pin",
   "dependencies": {
     "bootstrap": "^5.1.0",
     "vue": "^3.4.15"
