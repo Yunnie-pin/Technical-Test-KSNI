@@ -1,6 +1,6 @@
 {
   "name": "ksni-technical-test",
-  "version": "1.1.3",
+  "version": "1.1.4",
   "private": false,
   "type": "module",
   "scripts": {
@@ -12,10 +12,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Yunnie-pin/Technical-Test-KSNI.git"
+    "url": "https://github.com/Yunnie-pin/Technical-Test-KSNI"
   },
   "keywords": [
-    "next-js"
+    "vue-js"
   ],
   "author": "yunnie-pin",
   "dependencies": {
