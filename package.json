@@ -1,6 +1,6 @@
 {
   "name": "technical-test-ksni",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/Yunnie-pin/Technical-Test-KSNI/issues"
   },
-  "homepage": "https://github.com/Yunnie-pin/Technical-Test-KSNI#readme"
+  "homepage": "https://github.com/Yunnie-pin/Technical-Test-KSNI#readme",
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  }
 }
