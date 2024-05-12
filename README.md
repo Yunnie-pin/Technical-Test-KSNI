@@ -12,8 +12,7 @@
 
 ## About
 
-ksni-techniclal test is a simple project to test the technical skills of a candidate. The project is a simple web application that allows users to make dinamic form and view the details
-. The project is built using Vite and VueJs.
+ksni-techniclal test is a simple project to test the technical skills of a candidate. The project is a simple web application that allows users to search for a movie by title and view the details of the movie. The project is built using React and Next Js.
 
 This is a [Vue.js](https://vuejs.org/) project bootstrapped with vitejs 
 
