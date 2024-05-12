@@ -12,7 +12,8 @@
 
 ## About
 
-ksni-techniclal test is a simple project to test the technical skills of a candidate. The project is a simple web application that allows users to search for a movie by title and view the details of the movie. The project is built using React and Next Js.
+ksni-techniclal test is a simple project to test the technical skills of a candidate. The project is a simple web application that allows users to make dinamic form and view the details
+. The project is built using Vite and VueJs.
 
 This is a [Vue.js](https://vuejs.org/) project bootstrapped with vitejs 
 
@@ -39,8 +40,7 @@ bun dev
 ```
 
 * Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-* You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-* This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+* You can start editing the page by modifying `src`. The page auto-updates as you edit the file.
 
 
 ### Contributors
