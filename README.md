@@ -1,5 +1,8 @@
 # ksni-technical-test
 
+<img alt="Logo" src="https://i.imgur.com/aMKipqD.png" align="center"/>
+
+
 <p align="center">
 <img src="https://img.shields.io/github/contributors/Yunnie-pin/Technical-Test-KSNI?style=flat-square">
 <img src="https://img.shields.io/github/issues/Yunnie-pin/Technical-Test-KSNI?style=flat-square">
@@ -16,6 +19,13 @@ ksni-techniclal test is a simple project to test the technical skills of a candi
 . The project is built using Vite and VueJs.
 
 This is a [Vue.js](https://vuejs.org/) project bootstrapped with vitejs 
+
+## Demo
+[LINK](https://technical-test-ksni.vercel.app/)
+
+## OSS NPM
+[LINK](https://www.npmjs.com/package/ksni-technical-test)
+
 
 ## Installation
 
@@ -47,5 +57,4 @@ bun dev
   Open [Contributor](https://github.com/Yunnie-pin/Technical-Test-KSNI/graphs/contributors)
 
 ## License
-
 MIT

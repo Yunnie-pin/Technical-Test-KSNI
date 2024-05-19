@@ -1,7 +1,7 @@
 {
   "name": "technical-test-ksni",
-  "version": "1.1.10",
-  "description": "dinamic form with vuejs",
+  "version": "1.1.11",
+  "description": "dinamic form for technical test with vuejs",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
