@@ -17,6 +17,9 @@
 
 ksni-techniclal test is a simple project to test the technical skills of a candidate. The project is a simple web application that allows users to make dinamic form and view the details
 
+## Powered by TEA 
+LIVE ON [TEA](https://app.tea.xyz/)
+<img src="https://imgur.com/SeydgmE" align="center"/>
 
 ## Demo
 [LINK](https://technical-test-ksni.vercel.app/)
@@ -48,11 +51,7 @@ bun dev
 ```
 
 * Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-* You can start editing the page by modifying `src`. The page auto-updates as you edit the file.
 
 
 ### Contributors
   Open [Contributor](https://github.com/Yunnie-pin/Technical-Test-KSNI/graphs/contributors)
-
-## License
-MIT
