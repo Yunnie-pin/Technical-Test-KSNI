@@ -19,7 +19,7 @@ ksni-techniclal test is a simple project to test the technical skills of a candi
 
 ## Powered by TEA 
 LIVE ON [TEA](https://app.tea.xyz/)
-<img src="https://imgur.com/SeydgmE" align="center"/>
+<img src="https://i.imgur.com/SeydgmE.png" align="center"/>
 
 ## Demo
 [LINK](https://technical-test-ksni.vercel.app/)
